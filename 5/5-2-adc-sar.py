@@ -31,6 +31,7 @@ try:
     while True:
         i = acd()
         print(f"i = {i}, V = {(3.3*i)/255}")
+        
 finally:
     GPIO.output (dac, clean_bin)
     GPIO.cleanup ()
