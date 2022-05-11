@@ -42,7 +42,11 @@ plt.ylim(0, 3.5)
 ax.plot(T_data, V_data, c = "b", label='V(t)')
 ax.scatter(dot_x, dot_y, c = "b")
 
-plt.text()
+top_time = T_data[np.argmax(V_data)]
+
+plt.text(1, 3, "Время зарядки {}c \nВремя разрядки {} ".format(top_time, T_data.max() - top_time))
+
+plt.title("График зависимости V(t) во время зарядки и разрядки кондкнсатора")
 
 plt.legend()
 fig.savefig("test.png")
